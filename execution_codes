@@ -1,0 +1,11 @@
+# Execution codes for code 2.11, training REINFORCE agent, which result in figure 2.2
+conda activate lab
+python run_lab.py slm_lab/spec/benchmark/reinforce/reinforce_cartpole.json reinforce_cartople train
+
+# Execution codes for code 2.13, search over different gamma values. 
+conda activate lab 
+python run_lab.py slm_lab/spec/benchmark/reinforce/reinforce_cartpole.json reinforce_cartople search
+
+# Execution codes for code 2.15, comparing with baseline
+conda activate lab
+python run_lab.py slm_lab/spec/benchmark/reinforce/reinforce_cartpole.json reinforce_baseline_cartpole search

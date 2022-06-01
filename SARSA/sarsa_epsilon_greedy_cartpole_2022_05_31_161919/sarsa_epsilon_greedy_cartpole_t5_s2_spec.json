@@ -1,0 +1,73 @@
+{
+  "agent": [
+    {
+      "name": "SARSA",
+      "algorithm": {
+        "name": "SARSA",
+        "action_pdtype": "Argmax",
+        "action_policy": "epsilon_greedy",
+        "explore_var_spec": {
+          "name": "linear_decay",
+          "start_val": 1.0,
+          "end_val": 0.05,
+          "start_step": 0,
+          "end_step": 10000
+        },
+        "gamma": 0.99,
+        "training_frequency": 5
+      },
+      "memory": {
+        "name": "OnPolicyBatchReplay"
+      },
+      "net": {
+        "type": "MLPNet",
+        "hid_layers": [
+          64
+        ],
+        "hid_layers_activation": "selu",
+        "clip_grad_val": 0.5,
+        "loss_spec": {
+          "name": "MSELoss"
+        },
+        "optim_spec": {
+          "name": "RMSprop",
+          "lr": 0.05
+        },
+        "lr_scheduler_spec": null
+      }
+    }
+  ],
+  "env": [
+    {
+      "name": "CartPole-v0",
+      "max_t": null,
+      "max_frame": 100000
+    }
+  ],
+  "body": {
+    "product": "outer",
+    "num": 1
+  },
+  "meta": {
+    "distributed": false,
+    "eval_frequency": 2000,
+    "max_trial": 1,
+    "max_session": 4,
+    "rigorous_eval": 0,
+    "experiment": 0,
+    "trial": 5,
+    "session": 2,
+    "cuda_offset": 0,
+    "resume": false,
+    "experiment_ts": "2022_05_31_161919",
+    "prepath": "data/sarsa_epsilon_greedy_cartpole_2022_05_31_161919/sarsa_epsilon_greedy_cartpole_t5_s2",
+    "git_sha": "9102ff923d7a3e9c579edc18c6547cce94a7b77a",
+    "random_seed": 1654517662,
+    "graph_prepath": "data/sarsa_epsilon_greedy_cartpole_2022_05_31_161919/graph/sarsa_epsilon_greedy_cartpole_t5_s2",
+    "info_prepath": "data/sarsa_epsilon_greedy_cartpole_2022_05_31_161919/info/sarsa_epsilon_greedy_cartpole_t5_s2",
+    "log_prepath": "data/sarsa_epsilon_greedy_cartpole_2022_05_31_161919/log/sarsa_epsilon_greedy_cartpole_t5_s2",
+    "model_prepath": "data/sarsa_epsilon_greedy_cartpole_2022_05_31_161919/model/sarsa_epsilon_greedy_cartpole_t5_s2"
+  },
+  "name": "sarsa_epsilon_greedy_cartpole",
+  "trial_index": 5
+}

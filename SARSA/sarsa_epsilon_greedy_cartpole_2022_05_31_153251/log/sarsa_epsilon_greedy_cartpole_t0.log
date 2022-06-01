@@ -1,0 +1,3 @@
+[2022-05-31 15:32:51,710 PID:10298 INFO logger.py info] Running sessions
+[2022-05-31 16:14:21,673 PID:10298 INFO analysis.py analyze_trial] All trial data zipped to data/sarsa_epsilon_greedy_cartpole_2022_05_31_153251.zip
+[2022-05-31 16:14:21,673 PID:10298 INFO logger.py info] Trial 0 done

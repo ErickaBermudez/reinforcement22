@@ -1,0 +1,3 @@
+[2022-05-31 16:19:19,391 PID:13174 INFO search.py run_ray_search] Running ray search for spec sarsa_epsilon_greedy_cartpole
+[2022-06-01 08:50:30,179 PID:13174 INFO analysis.py analyze_experiment] All experiment data zipped to data/sarsa_epsilon_greedy_cartpole_2022_05_31_161919.zip
+[2022-06-01 08:50:30,179 PID:13174 INFO logger.py info] Experiment done

@@ -1,0 +1,79 @@
+{
+  "0": {
+    "final_return_ma": 24.84999990463257,
+    "strength": 2.989999532699585,
+    "max_strength": 54.88999938964844,
+    "final_strength": 0.1399993896484375,
+    "sample_efficiency": 5.429858026673173e-05,
+    "training_efficiency": 4.524881558154448e-05,
+    "stability": -1.1113865375518799,
+    "consistency": -8.692245981936448,
+    "agent.0.net.optim_spec.lr": 0.0005
+  },
+  "1": {
+    "final_return_ma": 19.90000009536743,
+    "strength": -1.9600005745887756,
+    "max_strength": 16.639999389648438,
+    "final_strength": -3.6100006103515625,
+    "sample_efficiency": 4.186920932625071e-05,
+    "training_efficiency": 3.489100731712824e-05,
+    "stability": -37.23603242635727,
+    "consistency": 7.8742045580168565,
+    "agent.0.net.optim_spec.lr": 0.001
+  },
+  "2": {
+    "final_return_ma": 23.800000190734863,
+    "strength": 1.939999371767044,
+    "max_strength": 21.889999389648438,
+    "final_strength": -3.8600006103515625,
+    "sample_efficiency": 6.526239440063364e-05,
+    "training_efficiency": 5.438532798507367e-05,
+    "stability": -0.7149246707558632,
+    "consistency": -9.600738714391559,
+    "agent.0.net.optim_spec.lr": 0.001
+  },
+  "3": {
+    "final_return_ma": 64.84999895095825,
+    "strength": 42.99000158905983,
+    "max_strength": 140.63999938964844,
+    "final_strength": 88.13999938964844,
+    "sample_efficiency": 0.00016483011222589994,
+    "training_efficiency": 0.00013735842685491662,
+    "stability": -0.8541330695152283,
+    "consistency": -2.2408896622437595,
+    "agent.0.net.optim_spec.lr": 0.005
+  },
+  "4": {
+    "final_return_ma": 143.850004196167,
+    "strength": 121.99000358581543,
+    "max_strength": 178.13999938964844,
+    "final_strength": 131.13999938964844,
+    "sample_efficiency": 1.9669486391649116e-05,
+    "training_efficiency": 1.6391239114454947e-05,
+    "stability": 0.8139376379549503,
+    "consistency": -0.0031704858626491195,
+    "agent.0.net.optim_spec.lr": 0.01
+  },
+  "5": {
+    "final_return_ma": 117.64999771118164,
+    "strength": 95.79000473022461,
+    "max_strength": 178.13999938964844,
+    "final_strength": 117.13999938964844,
+    "sample_efficiency": 3.381097440069425e-05,
+    "training_efficiency": 2.817581389535917e-05,
+    "stability": 0.46626660227775574,
+    "consistency": -0.7355913006012271,
+    "agent.0.net.optim_spec.lr": 0.05
+  },
+  "6": {
+    "final_return_ma": 23.575000286102295,
+    "strength": 1.7149991989135742,
+    "max_strength": 35.88999938964844,
+    "final_strength": -0.6100006103515625,
+    "sample_efficiency": 3.022875489477883e-05,
+    "training_efficiency": 2.5190628093696432e-05,
+    "stability": -0.043670251965522766,
+    "consistency": -18.80621597911636,
+    "agent.0.net.optim_spec.lr": 0.1
+  }
+}

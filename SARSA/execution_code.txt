@@ -1,0 +1,4 @@
+conda activate lab
+
+python run_lab.py slm_lab/spec/benchmark/sarsa/sarsa_cartpole.json sarsa_epsilon_greedy_cartpole train
+python run_lab.py slm_lab/spec/benchmark/sarsa/sarsa_cartpole.json sarsa_epsilon_greedy_cartpole search  

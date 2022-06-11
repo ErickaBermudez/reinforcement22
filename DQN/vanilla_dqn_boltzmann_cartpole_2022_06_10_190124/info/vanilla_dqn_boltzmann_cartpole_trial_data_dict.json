@@ -1,0 +1,56 @@
+{
+  "0": {
+    "final_return_ma": 64.4166669845581,
+    "strength": 42.55666542053223,
+    "max_strength": 152.88999938964844,
+    "final_strength": -12.610000610351562,
+    "sample_efficiency": 0.00011164018906129058,
+    "training_efficiency": 2.800343565922958e-06,
+    "stability": -0.18355423212051392,
+    "consistency": 0.6839916034230268,
+    "agent.0.net.hid_layers": [
+      32
+    ]
+  },
+  "1": {
+    "final_return_ma": 48.083333015441895,
+    "strength": 26.223332405090332,
+    "max_strength": 103.88999938964844,
+    "final_strength": -12.610000610351562,
+    "sample_efficiency": 9.92322484307806e-05,
+    "training_efficiency": 2.4887418703656294e-06,
+    "stability": 0.03181168809533119,
+    "consistency": -1.0619863347813698,
+    "agent.0.net.hid_layers": [
+      64
+    ]
+  },
+  "2": {
+    "final_return_ma": 41.75,
+    "strength": 19.88999915122986,
+    "max_strength": 84.63999938964844,
+    "final_strength": -12.610000610351562,
+    "sample_efficiency": 0.00012635304119612556,
+    "training_efficiency": 3.1698219800091465e-06,
+    "stability": -0.3649525046348572,
+    "consistency": 0.43111022205924354,
+    "agent.0.net.hid_layers": [
+      32,
+      16
+    ]
+  },
+  "3": {
+    "final_return_ma": 45.666666984558105,
+    "strength": 23.806665897369385,
+    "max_strength": 96.38999938964844,
+    "final_strength": -12.110000610351562,
+    "sample_efficiency": 0.00012049169890815392,
+    "training_efficiency": 3.0226334502003738e-06,
+    "stability": -0.31025487184524536,
+    "consistency": 0.7384778994317158,
+    "agent.0.net.hid_layers": [
+      64,
+      32
+    ]
+  }
+}

@@ -1,0 +1,181 @@
+[2022-05-11 13:56:58,786 PID:11835 INFO openai.py __init__] OpenAIEnv:
+- env_spec = {'max_frame': 100000, 'max_t': None, 'name': 'CartPole-v0'}
+- eval_frequency = 2000
+- log_frequency = 10000
+- frame_op = None
+- frame_op_len = None
+- image_downsize = (84, 84)
+- normalize_state = False
+- reward_scale = None
+- num_envs = 1
+- name = CartPole-v0
+- max_t = 200
+- max_frame = 100000
+- to_render = False
+- is_venv = False
+- clock_speed = 1
+- clock = <slm_lab.env.base.Clock object at 0x7f01cc96c128>
+- done = False
+- total_reward = nan
+- u_env = <TrackReward<TimeLimit<CartPoleEnv<CartPole-v0>>>>
+- observation_space = Box(4,)
+- action_space = Discrete(2)
+- observable_dim = {'state': 4}
+- action_dim = 2
+- is_discrete = True
+[2022-05-11 13:56:58,791 PID:11835 INFO base.py end_init_nets] Initialized algorithm models for lab_mode: train
+[2022-05-11 13:56:58,793 PID:11835 INFO base.py __init__] Reinforce:
+- agent = <slm_lab.agent.Agent object at 0x7f0142d26438>
+- action_pdtype = default
+- action_policy = <function default at 0x7f00f215cf28>
+- center_return = True
+- explore_var_spec = None
+- entropy_coef_spec = {'end_step': 20000,
+ 'end_val': 0.001,
+ 'name': 'linear_decay',
+ 'start_step': 0,
+ 'start_val': 0.01}
+- policy_loss_coef = 1.0
+- gamma = 0.99
+- training_frequency = 1
+- to_train = 0
+- explore_var_scheduler = <slm_lab.agent.algorithm.policy_util.VarScheduler object at 0x7f00ea920f28>
+- entropy_coef_scheduler = <slm_lab.agent.algorithm.policy_util.VarScheduler object at 0x7f00ea920ac8>
+- net = MLPNet(
+  (model): Sequential(
+    (0): Linear(in_features=4, out_features=64, bias=True)
+    (1): SELU()
+  )
+  (model_tail): Sequential(
+    (0): Linear(in_features=64, out_features=2, bias=True)
+  )
+  (loss_fn): MSELoss()
+)
+- net_names = ['net']
+- optim = Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.002
+    weight_decay: 0
+)
+- lr_scheduler = <slm_lab.agent.net.net_util.NoOpLRScheduler object at 0x7f00ea920ef0>
+- global_net = None
+[2022-05-11 13:56:58,794 PID:11835 INFO __init__.py __init__] Agent:
+- spec = {'cuda_offset': 0,
+ 'distributed': False,
+ 'eval_frequency': 2000,
+ 'experiment': 0,
+ 'experiment_ts': '2022_05_11_135657',
+ 'git_sha': '9102ff923d7a3e9c579edc18c6547cce94a7b77a',
+ 'graph_prepath': 'data/reinforce_cartpole_2022_05_11_135657/graph/reinforce_cartpole_t0_s2',
+ 'info_prepath': 'data/reinforce_cartpole_2022_05_11_135657/info/reinforce_cartpole_t0_s2',
+ 'log_prepath': 'data/reinforce_cartpole_2022_05_11_135657/log/reinforce_cartpole_t0_s2',
+ 'max_session': 4,
+ 'max_trial': 1,
+ 'model_prepath': 'data/reinforce_cartpole_2022_05_11_135657/model/reinforce_cartpole_t0_s2',
+ 'prepath': 'data/reinforce_cartpole_2022_05_11_135657/reinforce_cartpole_t0_s2',
+ 'random_seed': 1652247018,
+ 'resume': False,
+ 'rigorous_eval': 0,
+ 'session': 2,
+ 'trial': 0}
+- agent_spec = {'algorithm': {'action_pdtype': 'default',
+               'action_policy': 'default',
+               'center_return': True,
+               'entropy_coef_spec': {'end_step': 20000,
+                                     'end_val': 0.001,
+                                     'name': 'linear_decay',
+                                     'start_step': 0,
+                                     'start_val': 0.01},
+               'explore_var_spec': None,
+               'gamma': 0.99,
+               'name': 'Reinforce',
+               'training_frequency': 1},
+ 'memory': {'name': 'OnPolicyReplay'},
+ 'name': 'Reinforce',
+ 'net': {'clip_grad_val': None,
+         'hid_layers': [64],
+         'hid_layers_activation': 'selu',
+         'loss_spec': {'name': 'MSELoss'},
+         'lr_scheduler_spec': None,
+         'optim_spec': {'lr': 0.002, 'name': 'Adam'},
+         'type': 'MLPNet'}}
+- name = Reinforce
+- body = body: {
+  "agent": "<slm_lab.agent.Agent object at 0x7f0142d26438>",
+  "env": "<slm_lab.env.openai.OpenAIEnv object at 0x7f01cc959eb8>",
+  "a": 0,
+  "e": 0,
+  "b": 0,
+  "aeb": "(0, 0, 0)",
+  "explore_var": NaN,
+  "entropy_coef": 0.01,
+  "loss": NaN,
+  "mean_entropy": NaN,
+  "mean_grad_norm": NaN,
+  "best_total_reward_ma": -Infinity,
+  "total_reward_ma": NaN,
+  "train_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, total_reward_ma, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "eval_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, total_reward_ma, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "observation_space": "Box(4,)",
+  "action_space": "Discrete(2)",
+  "observable_dim": {
+    "state": 4
+  },
+  "state_dim": 4,
+  "action_dim": 2,
+  "is_discrete": true,
+  "action_type": "discrete",
+  "action_pdtype": "Categorical",
+  "ActionPD": "<class 'torch.distributions.categorical.Categorical'>",
+  "memory": "<slm_lab.agent.memory.onpolicy.OnPolicyReplay object at 0x7f00ea908860>"
+}
+- algorithm = <slm_lab.agent.algorithm.reinforce.Reinforce object at 0x7f00ea920be0>
+[2022-05-11 13:56:58,794 PID:11835 INFO logger.py info] Session:
+- spec = {'cuda_offset': 0,
+ 'distributed': False,
+ 'eval_frequency': 2000,
+ 'experiment': 0,
+ 'experiment_ts': '2022_05_11_135657',
+ 'git_sha': '9102ff923d7a3e9c579edc18c6547cce94a7b77a',
+ 'graph_prepath': 'data/reinforce_cartpole_2022_05_11_135657/graph/reinforce_cartpole_t0_s2',
+ 'info_prepath': 'data/reinforce_cartpole_2022_05_11_135657/info/reinforce_cartpole_t0_s2',
+ 'log_prepath': 'data/reinforce_cartpole_2022_05_11_135657/log/reinforce_cartpole_t0_s2',
+ 'max_session': 4,
+ 'max_trial': 1,
+ 'model_prepath': 'data/reinforce_cartpole_2022_05_11_135657/model/reinforce_cartpole_t0_s2',
+ 'prepath': 'data/reinforce_cartpole_2022_05_11_135657/reinforce_cartpole_t0_s2',
+ 'random_seed': 1652247018,
+ 'resume': False,
+ 'rigorous_eval': 0,
+ 'session': 2,
+ 'trial': 0}
+- index = 2
+- agent = <slm_lab.agent.Agent object at 0x7f0142d26438>
+- env = <slm_lab.env.openai.OpenAIEnv object at 0x7f01cc959eb8>
+- eval_env = <slm_lab.env.openai.OpenAIEnv object at 0x7f01cc959eb8>
+[2022-05-11 13:56:58,794 PID:11835 INFO logger.py info] Running RL loop for trial 0 session 2
+[2022-05-11 13:56:58,798 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 0  t: 0  wall_t: 0  opt_step: 0  frame: 0  fps: 0  total_reward: nan  total_reward_ma: nan  loss: nan  lr: 0.002  explore_var: nan  entropy_coef: 0.01  entropy: nan  grad_norm: nan
+[2022-05-11 13:59:00,189 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 121  t: 77  wall_t: 121  opt_step: 605  frame: 10000  fps: 82.6446  total_reward: 200  total_reward_ma: 200  loss: -0.784038  lr: 0.002  explore_var: nan  entropy_coef: 0.0055  entropy: 0.585408  grad_norm: nan
+[2022-05-11 14:01:02,623 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 176  t: 33  wall_t: 243  opt_step: 880  frame: 20000  fps: 82.3045  total_reward: 200  total_reward_ma: 200  loss: 0.0578769  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.584854  grad_norm: nan
+[2022-05-11 14:01:02,638 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 200  strength: 178.14  max_strength: 178.14  final_strength: 178.14  sample_efficiency: 7.5e-05  training_efficiency: 0.00139463  stability: 1
+[2022-05-11 14:03:29,684 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 235  t: 165  wall_t: 390  opt_step: 1175  frame: 30000  fps: 76.9231  total_reward: 200  total_reward_ma: 200  loss: 0.5359  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.575373  grad_norm: nan
+[2022-05-11 14:03:29,702 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 200  strength: 178.14  max_strength: 178.14  final_strength: 178.14  sample_efficiency: 6.11111e-05  training_efficiency: 0.00121344  stability: 1
+[2022-05-11 14:05:49,851 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 288  t: 29  wall_t: 531  opt_step: 1440  frame: 40000  fps: 75.3296  total_reward: 187  total_reward_ma: 196.75  loss: -0.0714454  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.562846  grad_norm: nan
+[2022-05-11 14:05:49,869 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 196.75  strength: 174.89  max_strength: 178.14  final_strength: 165.14  sample_efficiency: 5.25866e-05  training_efficiency: 0.00109092  stability: 0.975675
+[2022-05-11 14:07:50,715 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 341  t: 145  wall_t: 651  opt_step: 1705  frame: 50000  fps: 76.8049  total_reward: 200  total_reward_ma: 197.4  loss: -1.2006  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.558657  grad_norm: nan
+[2022-05-11 14:07:50,735 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 197.4  strength: 175.54  max_strength: 178.14  final_strength: 178.14  sample_efficiency: 4.59728e-05  training_efficiency: 0.000988547  stability: 0.981417
+[2022-05-11 14:10:03,417 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 395  t: 13  wall_t: 784  opt_step: 1975  frame: 60000  fps: 76.5306  total_reward: 183  total_reward_ma: 195  loss: 0.180419  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.564795  grad_norm: nan
+[2022-05-11 14:10:03,425 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 195  strength: 173.14  max_strength: 178.14  final_strength: 161.14  sample_efficiency: 4.14269e-05  training_efficiency: 0.000913748  stability: 0.96582
+[2022-05-11 14:12:11,949 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 453  t: 7  wall_t: 913  opt_step: 2265  frame: 70000  fps: 76.6703  total_reward: 200  total_reward_ma: 195.714  loss: 0.0236656  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.581234  grad_norm: nan
+[2022-05-11 14:12:11,980 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 195.714  strength: 173.854  max_strength: 178.14  final_strength: 178.14  sample_efficiency: 3.7454e-05  training_efficiency: 0.000844621  stability: 0.971122
+[2022-05-11 14:14:31,154 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 504  t: 21  wall_t: 1052  opt_step: 2520  frame: 80000  fps: 76.0456  total_reward: 200  total_reward_ma: 196.25  loss: 0.0354445  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.565176  grad_norm: nan
+[2022-05-11 14:14:31,171 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 196.25  strength: 174.39  max_strength: 178.14  final_strength: 178.14  sample_efficiency: 3.42677e-05  training_efficiency: 0.000787443  stability: 0.975349
+[2022-05-11 14:16:53,213 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 554  t: 152  wall_t: 1194  opt_step: 2770  frame: 90000  fps: 75.3769  total_reward: 200  total_reward_ma: 196.667  loss: 0.23084  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.556623  grad_norm: nan
+[2022-05-11 14:16:53,220 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 196.667  strength: 174.807  max_strength: 178.14  final_strength: 178.14  sample_efficiency: 3.16457e-05  training_efficiency: 0.000739158  stability: 0.978496
+[2022-05-11 14:17:59,293 PID:11835 INFO __init__.py log_summary] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df] epi: 605  t: 55  wall_t: 1260  opt_step: 3025  frame: 100000  fps: 79.3651  total_reward: 97  total_reward_ma: 186.7  loss: -1.15598  lr: 0.002  explore_var: nan  entropy_coef: 0.001  entropy: 0.480158  grad_norm: nan
+[2022-05-11 14:17:59,300 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [train_df metrics] final_return_ma: 186.7  strength: 164.84  max_strength: 178.14  final_strength: 75.14  sample_efficiency: 3.0659e-05  training_efficiency: 0.000720534  stability: 0.915462
+[2022-05-11 14:18:00,135 PID:11835 INFO __init__.py log_metrics] Trial 0 session 2 reinforce_cartpole_t0_s2 [eval_df metrics] final_return_ma: 186.7  strength: 164.84  max_strength: 178.14  final_strength: 75.14  sample_efficiency: 3.0659e-05  training_efficiency: 0.000720534  stability: 0.915462
+[2022-05-11 14:18:00,136 PID:11835 INFO logger.py info] Session 2 done

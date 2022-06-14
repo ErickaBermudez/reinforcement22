@@ -1,0 +1,84 @@
+{
+  "agent": [
+    {
+      "name": "VanillaDQN",
+      "algorithm": {
+        "name": "VanillaDQN",
+        "action_pdtype": "Categorical",
+        "action_policy": "boltzmann",
+        "explore_var_spec": {
+          "name": "linear_decay",
+          "start_val": 5.0,
+          "end_val": 0.5,
+          "start_step": 0,
+          "end_step": 4000
+        },
+        "gamma": 0.99,
+        "training_batch_iter": 8,
+        "training_iter": 4,
+        "training_frequency": 4,
+        "training_start_step": 32
+      },
+      "memory": {
+        "name": "Replay",
+        "batch_size": 32,
+        "max_size": 10000,
+        "use_cer": false
+      },
+      "net": {
+        "type": "MLPNet",
+        "hid_layers": [
+          64
+        ],
+        "hid_layers_activation": "selu",
+        "clip_grad_val": 0.5,
+        "loss_spec": {
+          "name": "MSELoss"
+        },
+        "optim_spec": {
+          "name": "Adam",
+          "lr": 0.01
+        },
+        "lr_scheduler_spec": {
+          "name": "LinearToZero",
+          "frame": 10000
+        },
+        "gpu": false
+      }
+    }
+  ],
+  "env": [
+    {
+      "name": "CartPole-v0",
+      "max_t": null,
+      "max_frame": 10000
+    }
+  ],
+  "body": {
+    "product": "outer",
+    "num": 1
+  },
+  "meta": {
+    "distributed": false,
+    "eval_frequency": 500,
+    "log_frequency": 500,
+    "max_session": 4,
+    "max_trial": 1,
+    "rigorous_eval": 0,
+    "experiment": 0,
+    "trial": 1,
+    "session": -1,
+    "cuda_offset": 0,
+    "resume": false,
+    "experiment_ts": "2022_06_14_043556",
+    "prepath": "data/vanilla_dqn_boltzmann_cartpole_2022_06_14_043556/vanilla_dqn_boltzmann_cartpole_t1",
+    "git_sha": "9102ff923d7a3e9c579edc18c6547cce94a7b77a",
+    "random_seed": null,
+    "graph_prepath": "data/vanilla_dqn_boltzmann_cartpole_2022_06_14_043556/graph/vanilla_dqn_boltzmann_cartpole_t1",
+    "info_prepath": "data/vanilla_dqn_boltzmann_cartpole_2022_06_14_043556/info/vanilla_dqn_boltzmann_cartpole_t1",
+    "log_prepath": "data/vanilla_dqn_boltzmann_cartpole_2022_06_14_043556/log/vanilla_dqn_boltzmann_cartpole_t1",
+    "model_prepath": "data/vanilla_dqn_boltzmann_cartpole_2022_06_14_043556/model/vanilla_dqn_boltzmann_cartpole_t1"
+  },
+  "name": "vanilla_dqn_boltzmann_cartpole",
+  "trial_index": 1
+}

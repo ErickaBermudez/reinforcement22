@@ -1,0 +1,3 @@
+[2022-06-14 18:26:44,135 PID:26280 INFO logger.py info] Running sessions
+[2022-06-14 18:57:48,370 PID:26280 INFO analysis.py analyze_trial] All trial data zipped to data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644.zip
+[2022-06-14 18:57:48,372 PID:26280 INFO logger.py info] Trial 0 done

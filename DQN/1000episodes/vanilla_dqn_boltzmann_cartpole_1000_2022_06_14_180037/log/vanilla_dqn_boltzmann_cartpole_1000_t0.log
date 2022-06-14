@@ -1,0 +1,3 @@
+[2022-06-14 18:00:37,217 PID:23022 INFO logger.py info] Running sessions
+[2022-06-14 18:19:05,547 PID:23022 INFO analysis.py analyze_trial] All trial data zipped to data/vanilla_dqn_boltzmann_cartpole_1000_2022_06_14_180037.zip
+[2022-06-14 18:19:05,549 PID:23022 INFO logger.py info] Trial 0 done

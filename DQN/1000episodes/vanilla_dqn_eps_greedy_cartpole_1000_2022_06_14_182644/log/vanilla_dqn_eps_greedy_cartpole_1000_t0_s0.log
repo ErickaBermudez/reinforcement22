@@ -1,0 +1,189 @@
+[2022-06-14 18:26:47,317 PID:26314 INFO openai.py __init__] OpenAIEnv:
+- env_spec = {'max_frame': 10000, 'max_t': 10, 'name': 'CartPole-v0'}
+- eval_frequency = 1000
+- log_frequency = 1000
+- frame_op = None
+- frame_op_len = None
+- image_downsize = (84, 84)
+- normalize_state = False
+- reward_scale = None
+- num_envs = 1
+- name = CartPole-v0
+- max_t = 10
+- max_frame = 10000
+- to_render = False
+- is_venv = False
+- clock_speed = 1
+- clock = <slm_lab.env.base.Clock object at 0x7fe9153fbe80>
+- done = False
+- total_reward = nan
+- u_env = <TrackReward<TimeLimit<CartPoleEnv<CartPole-v0>>>>
+- observation_space = Box(4,)
+- action_space = Discrete(2)
+- observable_dim = {'state': 4}
+- action_dim = 2
+- is_discrete = True
+[2022-06-14 18:26:53,301 PID:26314 INFO base.py end_init_nets] Initialized algorithm models for lab_mode: train
+[2022-06-14 18:26:53,314 PID:26314 INFO base.py __init__] VanillaDQN:
+- agent = <slm_lab.agent.Agent object at 0x7fe84c221e10>
+- action_pdtype = Argmax
+- action_policy = <function epsilon_greedy at 0x7fe85ac66378>
+- explore_var_spec = {'end_step': 4000,
+ 'end_val': 0.05,
+ 'name': 'linear_decay',
+ 'start_step': 0,
+ 'start_val': 1.0}
+- training_start_step = 32
+- gamma = 0.99
+- training_batch_iter = 8
+- training_iter = 4
+- training_frequency = 4
+- to_train = 0
+- explore_var_scheduler = <slm_lab.agent.algorithm.policy_util.VarScheduler object at 0x7fe84c22c160>
+- net = MLPNet(
+  (model): Sequential(
+    (0): Linear(in_features=4, out_features=64, bias=True)
+    (1): SELU()
+  )
+  (model_tail): Sequential(
+    (0): Linear(in_features=64, out_features=2, bias=True)
+  )
+  (loss_fn): MSELoss()
+)
+- net_names = ['net']
+- optim = Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.01
+    lr: 0.01
+    weight_decay: 0
+)
+- lr_scheduler = <torch.optim.lr_scheduler.LambdaLR object at 0x7fe84c22c4e0>
+- global_net = None
+[2022-06-14 18:26:53,317 PID:26314 INFO __init__.py __init__] Agent:
+- spec = {'cuda_offset': 0,
+ 'distributed': False,
+ 'eval_frequency': 1000,
+ 'experiment': 0,
+ 'experiment_ts': '2022_06_14_182644',
+ 'git_sha': '9102ff923d7a3e9c579edc18c6547cce94a7b77a',
+ 'graph_prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/graph/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'info_prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/info/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'log_frequency': 1000,
+ 'log_prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/log/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'max_session': 4,
+ 'max_trial': 1,
+ 'model_prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/model/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'random_seed': 1655198807,
+ 'resume': False,
+ 'rigorous_eval': 0,
+ 'session': 0,
+ 'trial': 0}
+- agent_spec = {'algorithm': {'action_pdtype': 'Argmax',
+               'action_policy': 'epsilon_greedy',
+               'explore_var_spec': {'end_step': 4000,
+                                    'end_val': 0.05,
+                                    'name': 'linear_decay',
+                                    'start_step': 0,
+                                    'start_val': 1.0},
+               'gamma': 0.99,
+               'name': 'VanillaDQN',
+               'training_batch_iter': 8,
+               'training_frequency': 4,
+               'training_iter': 4,
+               'training_start_step': 32},
+ 'memory': {'batch_size': 32,
+            'max_size': 10000,
+            'name': 'Replay',
+            'use_cer': False},
+ 'name': 'VanillaDQN',
+ 'net': {'clip_grad_val': 0.5,
+         'cuda_id': 0,
+         'gpu': True,
+         'hid_layers': [64],
+         'hid_layers_activation': 'selu',
+         'loss_spec': {'name': 'MSELoss'},
+         'lr_scheduler_spec': {'frame': 10000, 'name': 'LinearToZero'},
+         'optim_spec': {'lr': 0.01, 'name': 'Adam'},
+         'type': 'MLPNet'}}
+- name = VanillaDQN
+- body = body: {
+  "agent": "<slm_lab.agent.Agent object at 0x7fe84c221e10>",
+  "env": "<slm_lab.env.openai.OpenAIEnv object at 0x7fe85ada7320>",
+  "a": 0,
+  "e": 0,
+  "b": 0,
+  "aeb": "(0, 0, 0)",
+  "explore_var": 1.0,
+  "entropy_coef": NaN,
+  "loss": NaN,
+  "mean_entropy": NaN,
+  "mean_grad_norm": NaN,
+  "best_total_reward_ma": -Infinity,
+  "total_reward_ma": NaN,
+  "train_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, total_reward_ma, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "eval_df": "Empty DataFrame\nColumns: [epi, t, wall_t, opt_step, frame, fps, total_reward, total_reward_ma, loss, lr, explore_var, entropy_coef, entropy, grad_norm]\nIndex: []",
+  "observation_space": "Box(4,)",
+  "action_space": "Discrete(2)",
+  "observable_dim": {
+    "state": 4
+  },
+  "state_dim": 4,
+  "action_dim": 2,
+  "is_discrete": true,
+  "action_type": "discrete",
+  "action_pdtype": "Argmax",
+  "ActionPD": "<class 'slm_lab.lib.distribution.Argmax'>",
+  "memory": "<slm_lab.agent.memory.replay.Replay object at 0x7fe84c221f98>"
+}
+- algorithm = <slm_lab.agent.algorithm.dqn.VanillaDQN object at 0x7fe84c22c240>
+[2022-06-14 18:26:53,318 PID:26314 INFO logger.py info] Session:
+- spec = {'cuda_offset': 0,
+ 'distributed': False,
+ 'eval_frequency': 1000,
+ 'experiment': 0,
+ 'experiment_ts': '2022_06_14_182644',
+ 'git_sha': '9102ff923d7a3e9c579edc18c6547cce94a7b77a',
+ 'graph_prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/graph/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'info_prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/info/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'log_frequency': 1000,
+ 'log_prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/log/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'max_session': 4,
+ 'max_trial': 1,
+ 'model_prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/model/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'prepath': 'data/vanilla_dqn_eps_greedy_cartpole_1000_2022_06_14_182644/vanilla_dqn_eps_greedy_cartpole_1000_t0_s0',
+ 'random_seed': 1655198807,
+ 'resume': False,
+ 'rigorous_eval': 0,
+ 'session': 0,
+ 'trial': 0}
+- index = 0
+- agent = <slm_lab.agent.Agent object at 0x7fe84c221e10>
+- env = <slm_lab.env.openai.OpenAIEnv object at 0x7fe85ada7320>
+- eval_env = <slm_lab.env.openai.OpenAIEnv object at 0x7fe85ada7320>
+[2022-06-14 18:26:53,318 PID:26314 INFO logger.py info] Running RL loop for trial 0 session 0
+[2022-06-14 18:26:53,335 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 0  t: 0  wall_t: 0  opt_step: 0  frame: 0  fps: 0  total_reward: nan  total_reward_ma: nan  loss: nan  lr: 0.01  explore_var: 1  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:29:45,227 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 91  t: 9  wall_t: 177  opt_step: 38720  frame: 1000  fps: 5.64972  total_reward: 11  total_reward_ma: 11  loss: 1.55549e+09  lr: 0.009003  explore_var: 0.7625  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:32:42,549 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 183  t: 2  wall_t: 355  opt_step: 78720  frame: 2000  fps: 5.6338  total_reward: 8  total_reward_ma: 9.5  loss: 89640.7  lr: 0.008003  explore_var: 0.525  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:32:42,574 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 9.5  strength: -12.36  max_strength: -10.86  final_strength: -13.86  sample_efficiency: 0.00071966  training_efficiency: 1.84685e-05  stability: 0.723757
+[2022-06-14 18:35:43,376 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 276  t: 4  wall_t: 536  opt_step: 118720  frame: 3000  fps: 5.59701  total_reward: 11  total_reward_ma: 10  loss: 12887.6  lr: 0.007003  explore_var: 0.2875  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:35:43,396 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 10  strength: -11.86  max_strength: -10.86  final_strength: -10.86  sample_efficiency: 0.000601743  training_efficiency: 1.54024e-05  stability: 0.878641
+[2022-06-14 18:38:49,500 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 370  t: 1  wall_t: 722  opt_step: 158720  frame: 4000  fps: 5.54017  total_reward: 10  total_reward_ma: 10  loss: 5472.6  lr: 0.006003  explore_var: 0.05  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:38:49,520 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 10  strength: -11.86  max_strength: -10.86  final_strength: -11.86  sample_efficiency: 0.000513807  training_efficiency: 1.31269e-05  stability: 0.887577
+[2022-06-14 18:41:57,514 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 463  t: 6  wall_t: 910  opt_step: 198720  frame: 5000  fps: 5.49451  total_reward: 9  total_reward_ma: 9.8  loss: 92558.3  lr: 0.005003  explore_var: 0.05  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:41:57,534 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 9.8  strength: -12.06  max_strength: -10.86  final_strength: -12.86  sample_efficiency: 0.000446882  training_efficiency: 1.14006e-05  stability: 0.894604
+[2022-06-14 18:45:07,703 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 558  t: 6  wall_t: 1100  opt_step: 238720  frame: 6000  fps: 5.45455  total_reward: 9  total_reward_ma: 9.66667  loss: 59048.4  lr: 0.004003  explore_var: 0.05  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:45:07,724 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 9.66667  strength: -12.1933  max_strength: -10.86  final_strength: -12.86  sample_efficiency: 0.000397626  training_efficiency: 1.01329e-05  stability: 0.917081
+[2022-06-14 18:48:17,204 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 653  t: 6  wall_t: 1289  opt_step: 278720  frame: 7000  fps: 5.43057  total_reward: 9  total_reward_ma: 9.57143  loss: 5278.06  lr: 0.003003  explore_var: 0.05  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:48:17,227 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 9.57143  strength: -12.2886  max_strength: -10.86  final_strength: -12.86  sample_efficiency: 0.000359538  training_efficiency: 9.15444e-06  stability: 0.931657
+[2022-06-14 18:51:27,730 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 748  t: 2  wall_t: 1480  opt_step: 318720  frame: 8000  fps: 5.40541  total_reward: 10  total_reward_ma: 9.625  loss: 961.713  lr: 0.002003  explore_var: 0.05  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:51:27,749 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 9.625  strength: -12.235  max_strength: -10.86  final_strength: -11.86  sample_efficiency: 0.000331119  training_efficiency: 8.42538e-06  stability: 0.941874
+[2022-06-14 18:54:38,540 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 843  t: 4  wall_t: 1671  opt_step: 358720  frame: 9000  fps: 5.386  total_reward: 8  total_reward_ma: 9.44444  loss: 834.217  lr: 0.001003  explore_var: 0.05  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:54:38,559 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 9.44444  strength: -12.4156  max_strength: -10.86  final_strength: -13.86  sample_efficiency: 0.00030383  training_efficiency: 7.72609e-06  stability: 0.928484
+[2022-06-14 18:57:20,064 PID:26314 INFO __init__.py log_summary] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df] epi: 941  t: 8  wall_t: 1832  opt_step: 398720  frame: 10000  fps: 5.45852  total_reward: 8  total_reward_ma: 9.3  loss: 176.419  lr: 3e-06  explore_var: 0.05  entropy_coef: nan  entropy: nan  grad_norm: nan
+[2022-06-14 18:57:20,082 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [train_df metrics] final_return_ma: 9.3  strength: -12.56  max_strength: -10.86  final_strength: -13.86  sample_efficiency: 0.000281337  training_efficiency: 7.15028e-06  stability: 0.937355
+[2022-06-14 18:57:22,957 PID:26314 INFO __init__.py log_metrics] Trial 0 session 0 vanilla_dqn_eps_greedy_cartpole_1000_t0_s0 [eval_df metrics] final_return_ma: 9.3  strength: -12.56  max_strength: -10.86  final_strength: -13.86  sample_efficiency: 0.000281337  training_efficiency: 7.15028e-06  stability: 0.937355
+[2022-06-14 18:57:22,962 PID:26314 INFO logger.py info] Session 0 done
